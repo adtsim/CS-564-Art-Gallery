@@ -3,9 +3,10 @@
 // encapsulating the logic needed to fetch data from the Rijksmuseum API.
 
 import axios from "axios";
+const apiKey = process.env.API_KEY;
+
 
 const API_URL = "https://www.rijksmuseum.nl/api/en/collection";
-const apiKey = "KntueOG1";
 
 
 
