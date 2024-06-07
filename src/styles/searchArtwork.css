@@ -1,0 +1,60 @@
+/* Container styling */
+.container {
+    padding: 20px;
+  }
+  
+  /* Form styling */
+  form {
+    margin-bottom: 20px;
+  }
+  
+  /* Input styling */
+  form input, form select {
+    margin-bottom: 10px;
+  }
+  
+  /* Button styling */
+  form button {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+  }
+  
+  /* Loading and error messages */
+  .loading,
+  .error {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  /* Card styling */
+  .card {
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  /* Responsive layout for small screens */
+  @media (max-width: 576px) {
+    .card img {
+      height: 200px;
+    }
+  }
+  

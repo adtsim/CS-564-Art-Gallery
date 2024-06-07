@@ -1,0 +1,45 @@
+.signup-container {
+    background-color: #000000; /* Light pastel grey */
+    height: 100vh;
+  }
+  
+  .signup-box {
+    background-color: #aec6cf; /* Light pastel blue */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup-box h2 {
+    color: #343a40;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .form-control-signup {
+    border: none;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    padding: 1rem;
+    background-color: #e0e0e0; /* Light grey */
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-control-signup:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-signup {
+    background-color: #ddc1b4; /* Light pastel green */
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: #343333;
+    padding: 1rem 2rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-signup:hover {
+    background-color: #8fc6c7; /* Slightly darker pastel green */
+  }
+  
