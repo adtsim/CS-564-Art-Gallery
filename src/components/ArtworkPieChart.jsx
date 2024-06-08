@@ -97,7 +97,7 @@ const ArtworkPieChart = () => {
         Top 3 Artists of the 17th, 18th, and 19th Centuries: A Legacy of
         Artworks.
       </h1>
-      <div style={{ width: "100%", minWidth: "60%", maxWidth: "50%" }}>
+      <div style={{ width: "100%", maxWidth: "60%" }}>
         <Pie
           style={{ position: "absolute" }}
           data={pieChartData}

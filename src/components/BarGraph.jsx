@@ -97,6 +97,7 @@ const BarGraphContainer = ({ sortedAndFilteredArtists, data, period }) => {
       </h1>
       <div className="analyze-container">
         <Bar
+          key={period}
           data={chartData}
           options={chartOptions}
           style={{ position: "absolute" }}
