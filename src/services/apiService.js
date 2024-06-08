@@ -174,17 +174,14 @@ export const getPieceById = async (id) => {
 export const fetchCollections = async () => {
   try {
     // Request a single page of 100 painting items from the Rijksmuseum API
-    const response = await axios.get(
-      `https://www.rijksmuseum.nl/api/en/collection`,
-      {
-        params: {
-          key: "A3B8HWv5",
-          ps: 100, // Only fetch 100 items
-          p: 1, // Fetch the first page
-          type: "painting", // Only paintings
-        },
-      }
-    );
+    const response = await axios.get(`${API_URL}`, {
+      params: {
+        key: apiKey,
+        ps: 100, // Only fetch 100 items
+        p: 1, // Fetch the first page
+        type: "painting", // Only paintings
+      },
+    });
 
     // Check if the response has art objects and return them, otherwise return an empty array
     return response.data && response.data.artObjects
@@ -200,7 +197,7 @@ export const fetchArtworkCountsByMaterialAndCentury = async (
   material,
   century
 ) => {
-  const url = `https://www.rijksmuseum.nl/api/en/collection?key=A3B8HWv5&material=${material}&f.dating.period=${century}&format=json`;
+  const url = `${API_URL}?key=${apiKey}&material=${material}&f.dating.period=${century}&format=json`;
   try {
     const response = await axios.get(url);
     return response.data.count;

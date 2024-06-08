@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchArtworkCountsByMaterialAndCentury } from "../services/apiService";
+import { fetchArtworkCountsByTypeAndCentury } from "../services/apiService";
 import {
   BarChart,
   Bar,
@@ -23,8 +23,10 @@ function ArtworkComparison() {
       for (const material of materials) {
         const countsByCentury = {};
         for (const [century] of Object.entries(centuries)) {
-          countsByCentury[century] =
-            await fetchArtworkCountsByMaterialAndCentury(material, century);
+          countsByCentury[century] = await fetchArtworkCountsByTypeAndCentury(
+            material,
+            century
+          );
         }
         dataForChart.push({
           material,
@@ -76,7 +78,7 @@ function ArtworkComparison() {
   }
 
   return (
-    <div style={{ width: "100%", height: 300 }}>
+    <div style={{ width: "100%", height: 300, color: "white" }}>
       <h1>Artwork Comparison Across Centuries</h1>
       <p>
         Comparing the number of chalk, ink, and pencil art made across the 18th,
