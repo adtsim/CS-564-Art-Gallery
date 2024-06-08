@@ -26,6 +26,12 @@ const NavigationBar = () => {
           <Nav.Link as={Link} to="/analyze">
             Analyze
           </Nav.Link>
+          <Nav.Link as={Link} to="/collections">
+            Collections
+          </Nav.Link>
+          <Nav.Link as={Link} to="/compare-artworks">
+            Compare Artworks
+          </Nav.Link>
         </Nav>
         {/* Right-aligned links */}
         <Nav className="ml-auto">

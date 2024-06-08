@@ -171,6 +171,45 @@ export const getPieceById = async (id) => {
   }
 };
 
+export const fetchCollections = async () => {
+  try {
+    // Request a single page of 100 painting items from the Rijksmuseum API
+    const response = await axios.get(
+      `https://www.rijksmuseum.nl/api/en/collection`,
+      {
+        params: {
+          key: "A3B8HWv5",
+          ps: 100, // Only fetch 100 items
+          p: 1, // Fetch the first page
+          type: "painting", // Only paintings
+        },
+      }
+    );
+
+    // Check if the response has art objects and return them, otherwise return an empty array
+    return response.data && response.data.artObjects
+      ? response.data.artObjects
+      : [];
+  } catch (error) {
+    console.error("Error fetching collections: ", error);
+    return []; // Return an empty array on error to ensure downstream processing doesn't fail
+  }
+};
+
+export const fetchArtworkCountsByMaterialAndCentury = async (
+  material,
+  century
+) => {
+  const url = `https://www.rijksmuseum.nl/api/en/collection?key=A3B8HWv5&material=${material}&f.dating.period=${century}&format=json`;
+  try {
+    const response = await axios.get(url);
+    return response.data.count;
+  } catch (error) {
+    console.error("Error fetching artwork counts:", error);
+    return 0; // Return 0 in case of an error
+  }
+};
+
 const apiService = {
   getPieceById,
   fetchArtworksByMaker,
@@ -178,6 +217,8 @@ const apiService = {
   fetchData,
   fetchGallery,
   fetchArtworksByTypeAndPeriod,
+  fetchCollections,
+  fetchArtworkCountsByMaterialAndCentury,
 };
 
 export default apiService;
