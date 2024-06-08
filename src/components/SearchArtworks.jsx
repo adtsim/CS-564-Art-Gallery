@@ -42,7 +42,7 @@ const SearchArtworks = () => {
         <Form.Group controlId="searchQuery">
           <Form.Label>Search Artworks by Title or Artist</Form.Label>
           {/* Dropdown to select artist */}
-          <Form.Control
+          <Form.Control id="selectArtist"
             as="select"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -54,7 +54,7 @@ const SearchArtworks = () => {
             ))}
           </Form.Control>
           {/* Input field to enter search query */}
-          <Form.Control
+          <Form.Control id="searchArt"
             type="text"
             placeholder="Enter title or artist name"
             value={query}

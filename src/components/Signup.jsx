@@ -37,7 +37,7 @@ const Signup = () => {
             {message && <Alert variant="success">{message}</Alert>}
             <Form onSubmit={handleSubmit}>
               <Form.Group controlId="formName" className="mb-3">
-                <Form.Control
+                <Form.Control id="name"
                   type="text"
                   placeholder="Name"
                   value={name}
@@ -48,7 +48,7 @@ const Signup = () => {
               </Form.Group>
 
               <Form.Group controlId="formEmail" className="mb-3">
-                <Form.Control
+                <Form.Control id="email"
                   type="email"
                   placeholder="Email address"
                   value={email}
@@ -59,7 +59,7 @@ const Signup = () => {
               </Form.Group>
 
               <Form.Group controlId="formPassword" className="mb-3">
-                <Form.Control
+                <Form.Control id="password"
                   type="password"
                   placeholder="Password"
                   value={password}
