@@ -1,0 +1,84 @@
+/* TopPiecesCardStyles.css */
+
+.gallery-title {
+  margin-bottom: 20px; /* Adjusted for better spacing */
+  font-size: 1.5rem; /* Responsive font size */
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.top-pieces-container {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    minmax(0, 320px)
+  ); /* Sets max width of cards */
+  gap: 20px;
+  justify-content: center; /* Centers the grid within the container */
+
+  padding: 20px;
+  margin: 0 auto; /* Centrally aligns the container */
+}
+
+.top-piece-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%; /* Uses 100% of the grid column width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.top-piece-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.top-piece-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.top-piece-card:hover .top-piece-image {
+  transform: scale(1.1);
+}
+
+.top-piece-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.top-piece-info h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #0056b3;
+}
+
+.top-piece-info p {
+  font-size: 14px;
+  color: #333;
+}
+
+.loading-container_analyze {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; /* Ensure full coverage horizontally */
+  bottom: 0; /* Ensure full coverage vertically */
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Light overlay */
+  z-index: 10; /* Make sure it's above other content */
+  padding: 20px;
+}

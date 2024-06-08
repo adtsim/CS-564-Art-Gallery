@@ -8,7 +8,7 @@ const NavigationBar = () => {
     // Navigation bar component
     <Navbar bg="dark" variant="dark" expand="lg">
       {/* Brand name */}
-      <Navbar.Brand href="/">Art Gallery</Navbar.Brand>
+      <Navbar.Brand href="/">Galleria d’arte</Navbar.Brand>
       {/* Navbar toggle button */}
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       {/* Navbar collapse section */}
@@ -23,11 +23,19 @@ const NavigationBar = () => {
           <Nav.Link as={Link} to="/search-artworks">
             Search Artworks
           </Nav.Link>
+          <Nav.Link as={Link} to="/analyze">
+            Analyze
+          </Nav.Link>
         </Nav>
         {/* Right-aligned links */}
         <Nav className="ml-auto">
           {/* Sign Up button */}
-          <Button as={Link} to="/signup" variant="outline-light" className="mr-2">
+          <Button
+            as={Link}
+            to="/signup"
+            variant="outline-light"
+            className="mr-2"
+          >
             Sign Up
           </Button>
           {/* Login button */}

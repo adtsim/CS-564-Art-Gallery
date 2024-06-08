@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import apiService from "../services/apiService";
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/home.css"; // Import CSS file
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
     // Fetch artworks from collections when component mounts
     const fetchArtworks = async () => {
       try {
-         // Fetch artworks from collections
+        // Fetch artworks from collections
         const artworks = await apiService.fetchCollections();
         setArtworks(artworks);
       } catch (error) {
@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h1 className="my-4">Art Gallery</h1>
+      <h1 className="my-4">Galleria d’arte</h1>
       {loading ? (
         <div className="loading-container">
           <iframe
@@ -57,7 +57,11 @@ const Home = () => {
         >
           {artworks.map((artwork, index) => (
             // Render carousel item for each artwork
-            <Link to={`/info-piece/${artwork.objectNumber}`} key={index} className="carousel-item-container">
+            <Link
+              to={`/info-piece/${artwork.objectNumber}`}
+              key={index}
+              className="carousel-item-container"
+            >
               <img
                 src={artwork.webImage.url}
                 alt={artwork.title || `Artwork ${index + 1}`}

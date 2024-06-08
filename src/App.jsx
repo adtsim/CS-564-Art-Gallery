@@ -2,12 +2,12 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
+import Analyze from "./components/Analyze";
 import InfoPiece from "./components/InfoPiece";
 import { GalleryProvider } from "./context/GalleryContext";
 import SearchArtworks from "./components/SearchArtworks";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
-
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/analyze" element={<Analyze />} />
           <Route path="/info-piece/:id" element={<InfoPiece />} />
           <Route path="/search-artworks" element={<SearchArtworks />} />
           <Route path="/signup" element={<Signup />} />
