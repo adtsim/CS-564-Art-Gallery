@@ -8,6 +8,9 @@ import { GalleryProvider } from "./context/GalleryContext";
 import SearchArtworks from "./components/SearchArtworks";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import Collections from "../src/components/Collections";
+import CollectionDetails from "../src/components/CollectionDetails";
+import CompareArtworks from "./components/CompareArtworks";
 
 function App() {
   return (
@@ -21,6 +24,12 @@ function App() {
           <Route path="/search-artworks" element={<SearchArtworks />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/collections" element={<Collections />} />
+          <Route
+            path="/collection-details/:maker"
+            element={<CollectionDetails />}
+          />
+          <Route path="/compare-artworks" element={<CompareArtworks />} />
         </Routes>
       </Router>
     </GalleryProvider>
