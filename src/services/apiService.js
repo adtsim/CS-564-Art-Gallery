@@ -3,7 +3,7 @@
 // encapsulating the logic needed to fetch data from the Rijksmuseum API.
 
 import axios from "axios";
-const apiKey = process.env.VITE_APP_APOD_API_KEY;
+const apiKey = import.meta.env.VITE_API_SECRET_KEY;
 
 const API_URL = "https://www.rijksmuseum.nl/api/en/collection";
 
