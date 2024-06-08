@@ -40,7 +40,7 @@ const SearchArtworks = () => {
       <Form onSubmit={handleSearch} className="mb-4">
         {/* Label for search form */}
         <Form.Group controlId="searchQuery">
-          <Form.Label>Search Artworks by Title or Artist</Form.Label>
+          <Form.Label className="whiteLabel">Search Artworks by Title or Artist</Form.Label>
           {/* Dropdown to select artist */}
           <Form.Control id="selectArtist"
             as="select"
