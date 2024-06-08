@@ -1,0 +1,44 @@
+.login-container {
+    background-color: #000000; /* Light pastel yellow */
+    height: 100vh;
+  }
+  
+  .login-box {
+    background-color: #aec6cf; /* Light pastel blue */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-box h2 {
+    color: #343a40;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .form-control-login {
+    border: none;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    padding: 1rem;
+    background-color: #e0e0e0; /* Light grey */
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-control-login:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-login {
+    background-color: #e6a3a3; /* Light pastel pink */
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-login:hover {
+    background-color: #d49090; /* Slightly darker pastel pink */
+  }
+  
