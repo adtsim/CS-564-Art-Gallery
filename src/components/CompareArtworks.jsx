@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchArtworkCountsByTypeAndCentury } from "../services/apiService";
+import { fetchArtworkCountsByMaterialAndCentury } from "../services/apiService";
 import {
   BarChart,
   Bar,
@@ -23,10 +23,8 @@ function ArtworkComparison() {
       for (const material of materials) {
         const countsByCentury = {};
         for (const [century] of Object.entries(centuries)) {
-          countsByCentury[century] = await fetchArtworkCountsByTypeAndCentury(
-            material,
-            century
-          );
+          countsByCentury[century] =
+            await fetchArtworkCountsByMaterialAndCentury(material, century);
         }
         dataForChart.push({
           material,
