@@ -23,7 +23,6 @@ export const fetchArtworksByMaker = async (maker) => {
 };
 
 export const getPieceById = async (id) => {
-  //const url = `${API_URL}/${objectNumber}?key=${apiKey}`;
   const url =  `${API_URL}/${id}?key=${apiKey}`;
   try {
     const response = await axios.get(url);
